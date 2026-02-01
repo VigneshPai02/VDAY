@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    background-color: #FADADD;
+    text-align: center;
+}
+
+/* LETTER SCREEN */
+#letter-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ENVELOPE */
+#envelope img {
+    width: 220px;
+    animation: floatIn 1s ease-out;
+}
+
+#envelope.open img {
+    animation: openEnvelope 1s ease forwards;
+}
+
+@keyframes floatIn {
+    from { transform: translateY(-200px); opacity: 0; }
+    to { transform: none; opacity: 1; }
+}
+
+@keyframes openEnvelope {
+    to { transform: rotateX(70deg); opacity: 0; }
+}
+
+/* LETTER */
+#letter-paper {
+    width: min(90vw, 360px);
+    min-height: 260px;
+    background: url('paper.png') center/cover no-repeat;
+    padding: 30px;
+    font-family: 'Sacramento', cursive;
+    font-size: clamp(24px, 5vw, 30px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.signature {
+    margin-top: 20px;
+    font-size: 32px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* LETTER CONTROLS */
+#letter-question {
+    font-family: 'Sacramento', cursive;
+    font-size: 34px;
+    margin-top: 25px;
+}
+
+#letter-options button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 26px;
+    font-family: 'Sacramento', cursive;
+    background-color: #FB607F;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* SAD IMAGE */
+#sad-image-container img {
+    margin-top: 20px;
+    max-width: 280px;
+}
+
+/* MAIN APP */
+#container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#question {
+    font-family: 'Sacramento', cursive;
+    font-size: 52px;
+}
+
+#options {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 26px;
+    font-family: 'Sacramento', cursive;
+    background-color: #FB607F;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* FINAL HEART */
+.heart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.love-text {
+    font-family: 'Sacramento', cursive;
+    font-size: clamp(36px, 7vw, 44px);
+    color: #ff2f68;
+    opacity: 0;
+    animation: fadeInLove 1.5s ease forwards;
+}
+
+@keyframes fadeInLove {
+    to { opacity: 1; }
+}

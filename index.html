@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LETTER SCREEN -->
+<div id="letter-container">
+
+    <!-- ENVELOPE -->
+    <div id="envelope">
+        <img src="envelope.png" alt="Envelope">
+    </div>
+
+    <!-- LETTER -->
+    <div id="letter-paper" class="hidden">
+        <div id="letter-content">
+            <p id="typewriter-text"></p>
+            <p class="signature hidden">Happy Three Months, Babe! ❤️</p>
+        </div>
+    </div>
+
+    <div id="letter-question" class="hidden">Did you read the letter?</div>
+
+    <div id="letter-options" class="hidden">
+        <button onclick="handleLetterResponse(true)">Yes</button>
+        <button onclick="handleLetterResponse(false)">No</button>
+    </div>
+
+    <div id="sad-image-container"></div>
+</div>
+
+<!-- MAIN APP -->
+<div id="container" style="display:none;">
+    <div id="image-container"></div>
+    <div id="text-container">
+        <div id="question">Will you be my valentine?</div>
+        <div id="options">
+            <button id="yes-button" onclick="selectOption('yes')">Yes</button>
+            <button id="no-button" onclick="selectOption('no')">No</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
